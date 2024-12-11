@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>국회의원  명단</title>
+    <title>국회의원 명단</title>
     <style>
         * {
             box-sizing: border-box;
@@ -15,127 +15,913 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
-        .member-list {
+        ul {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             list-style-type: none;
         }
-        .member-item {
+        .member {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             overflow: hidden;
             transition: transform 0.3s ease;
         }
-        .member-item:hover {
+        .member:hover {
             transform: scale(1.05);
         }
-        .member-image {
+        .image {
             width: 100%;
             height: 300px;
             object-fit: cover;
         }
-        .member-details {
+        .details {
             padding: 15px;
             text-align: center;
         }
-        .member-name {
+        .name {
             font-weight: bold;
             font-size: 1.1em;
             margin-bottom: 10px;
         }
-        .member-district {
+        .district {
             color: #666;
             font-size: 0.9em;
+        }
+        .point {
+            background-color: #007BFF;
+            color: white;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            position: relative;
+            display: inline-block;
+            max-width: 90%;
+        }
+
+        .point::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: #007BFF transparent transparent transparent;
         }
     </style>
 </head>
 <body>
-    <ul class="member-list">
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/45d0d0758d9b4e1e8e2b86434770e2fc.jpg" alt="서천호" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">서천호</h2>
-                <p class="member-district">경남 사천시남해군하동군</p>
+    <ul>
+
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/d1fe9f0902d84f0ba74f721d3298be7f.png" alt="강대식" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">강대식</h2>
+                <p class="district">대구 동구군위군을</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/8ac7d150f3434b12a31e2d441beea36c.jpg" alt="성일종" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">성일종</h2>
-                <p class="member-district">충남 서산시태안군</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/9f095290d68b47638983c7db100c2eb0.jpg" alt="강명구" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">강명구</h2>
+                <p class="district">경북 구미시을</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/21eedc628d844950876d6cdb52a5988a.png" alt="송석준" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">송석준</h2>
-                <p class="member-district">경기 이천시</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/70f21f66d1ea471192858adb6f379299.png" alt="강민국" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">강민국</h2>
+                <p class="district">경남 진주시을</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/b3c309f7dfd34dd486d7f60acfcd3254.JPG" alt="송언석" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">송언석</h2>
-                <p class="member-district">경북 김천시</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/89a10eac7851470598886907100ae5ad.jpg" alt="강선영" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">강선영</h2>
+                <p class="district">비례대표</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/bef0ced14c4241cbbc5181e2bc9805ef.jpg" alt="신동욱" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">신동욱</h2>
-                <p class="member-district">서울 서초구을</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/ec481315df7b49b4b1a0e8761f41ca49.jpg" alt="강승규" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">강승규</h2>
+                <p class="district">충남 홍성군예산군</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/90ebb7eaa3a648f5a96eea2037be33bf.jpg" alt="신성범" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">신성범</h2>
-                <p class="member-district">경남 산청군함양군거창군합천군</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/8e0621184727401ea5537cbeb1557776.jpg" alt="고동진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">고동진</h2>
+                <p class="district">서울 강남구병</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/ba1a4675a60a42d8ad14b64f5f35a93c.png" alt="안상훈" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">안상훈</h2>
-                <p class="member-district">비례대표</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/fd163330861a4c5691ba7cfd0ad39ea6.jpg" alt="곽규택" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">곽규택</h2>
+                <p class="district">부산 서구동구</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/1c796117e6084fc0b8d6b5ee4e44c077.png" alt="엄태영" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">엄태영</h2>
-                <p class="member-district">충북 제천시단양군</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/009fb2abbde940579802b3494f132e85.jpg" alt="구자근" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">구자근</h2>
+                <p class="district">경북 구미시갑</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/2ef1338017ed47cfb9106a90b6262bd7.png" alt="우재준" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">우재준</h2>
-                <p class="member-district">대구 북구갑</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/af3b64d8d85b45dcbccefb6646589be9.png" alt="권성동" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">권성동</h2>
+                <p class="district">강원 강릉시</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/9d4701db5dcd4eafa39d36c1dbc44e47.jpg" alt="유상범" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">유상범</h2>
-                <p class="member-district">강원 홍천군횡성군영월군평창군</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/f58fcbb4b2f64d05a335da7099f679e7.jpg" alt="권영세" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">권영세</h2>
+                <p class="district">서울 용산구</p>
             </div>
         </li>
-        <!-- 이하 생략 (나머지 의원들 추가) 총 44명 -->
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/c7d6cfa2eaa14041bb6408aba44ae0ab.png" alt="추경호" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">추경호</h2>
-                <p class="member-district">대구 달성군</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">권영진</h2>
+                <p class="district">대구 달서구병</p>
             </div>
         </li>
-        <li class="member-item">
-            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/5156034c3ba143c3bae113a864791bcd.jpg" alt="한지아" class="member-image">
-            <div class="member-details">
-                <h2 class="member-name">한지아</h2>
-                <p class="member-district">비례대표</p>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">김건</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">김기웅</h2>
+                <p class="district">대구 중구남구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">김기현</h2>
+                <p class="district">울산 남구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당 인원의 특징</p>
+                <h2 class="name">김대식</h2>
+                <p class="district">부산 사상구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김도읍</h2>
+                <p class="district">부산 강서구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김미애</h2>
+                <p class="district">부산 해운대구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김민전</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김상훈</h2>
+                <p class="district">대구 서구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김석기</h2>
+                <p class="district">경북 경주시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김선교</h2>
+                <p class="district">경기 여주시양평군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김성원</h2>
+                <p class="district">경기 동두천시양주시연천구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김소희</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김승수</h2>
+                <p class="district">대구 북구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김용태</h2>
+                <p class="district">경기 포천시가평군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김위상</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김은혜</h2>
+                <p class="district">경기 성남시분당구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김장겸</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김재섭</h2>
+                <p class="district">서울 도봉구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김정재</h2>
+                <p class="district">경북 포항시북구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김종양</h2>
+                <p class="district">경남 창원시의창구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김태호</h2>
+                <p class="district">경남 양산시을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김형동</h2>
+                <p class="district">경북 안동시예천군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">김희정</h2>
+                <p class="district">부산 연제구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">나경원</h2>
+                <p class="district">서울 동작구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박대출</h2>
+                <p class="district">경남 진주시갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박덕흠</h2>
+                <p class="district">충북 보은군옥천군영동군괴산군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박상웅</h2>
+                <p class="district">경남 밀양시의령군함안군창녕군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박성민</h2>
+                <p class="district">울산 중구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박성훈</h2>
+                <p class="district">부산 북구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박수민</h2>
+                <p class="district">서울 강남구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박수영</h2>
+                <p class="district">부산 남구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박정하</h2>
+                <p class="district">강원 원주시갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박정훈</h2>
+                <p class="district">서울 송파구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박준태</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박충권</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">박형수</h2>
+                <p class="district">경북 의성군청송군영덕군울진군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">배준영</h2>
+                <p class="district">인천 중구강화군옹진군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">배현진</h2>
+                <p class="district">서울 송파구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">백종헌</h2>
+                <p class="district">부산 금정구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">서명옥</h2>
+                <p class="district">서울 강남구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">서범수</h2>
+                <p class="district">울산 울주군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">서일준</h2>
+                <p class="district">경남 거제시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">서지영</h2>
+                <p class="district">부산 동래구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">서천호</h2>
+                <p class="district">경남 사천시남해군하동군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">성일종</h2>
+                <p class="district">충남 서산시태안군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">송석준</h2>
+                <p class="district">경기 이천시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">송언석</h2>
+                <p class="district">경북 김천시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">신동욱</h2>
+                <p class="district">서울 서초구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">신성범</h2>
+                <p class="district">경남 산청군함양군거창군합천군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">안상훈</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">엄태영</h2>
+                <p class="district">충북 제천시단양군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">우재준</h2>
+                <p class="district">대구 북구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">유상범</h2>
+                <p class="district">강원 홍천군횡성군영월군평창군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">유영하</h2>
+                <p class="district">대구 달서구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">유용원</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">윤상현</h2>
+                <p class="district">인천 동구미추홀구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">윤영석</h2>
+                <p class="district">경남 양산시갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">윤재옥</h2>
+                <p class="district">대구 달서구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">윤한홍</h2>
+                <p class="district">경남 창원시마산회원구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이달희</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이만희</h2>
+                <p class="district">경북 영천시청도군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이상휘</h2>
+                <p class="district">경북 포항시남구울릉군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이성권</h2>
+                <p class="district">부산 사하구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이양수</h2>
+                <p class="district">강원 속초시인제군고성군양양군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이인선</h2>
+                <p class="district">대구 수성구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이종배</h2>
+                <p class="district">충북 충주시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이종욱</h2>
+                <p class="district">경남 창원시진해구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이철규</h2>
+                <p class="district">강원 동해시태백시삼척시정선군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이헌승</h2>
+                <p class="district">부산 부산진구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">인요한</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">임이자</h2>
+                <p class="district">경북 상주시문경시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">임종득</h2>
+                <p class="district">경북 영주시영양군봉화군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">장동혁</h2>
+                <p class="district">충남 보령시서천군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">정동만</h2>
+                <p class="district">부산 기장군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">정성국</h2>
+                <p class="district">부산 부산진구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">정연욱</h2>
+                <p class="district">부산 수영구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">정점식</h2>
+                <p class="district">경남 통영시고성군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">정희용</h2>
+                <p class="district">경북 고령군성주군칠곡군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조경태</h2>
+                <p class="district">부산 사하구을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조배숙</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조승환</h2>
+                <p class="district">부산 중구영도구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조은희</h2>
+                <p class="district">서울 서초구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조정훈</h2>
+                <p class="district">서울 마포구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">조지연</h2>
+                <p class="district">경북 경산시</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">이름</h2>
+                <p class="district">지역</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">주진우</h2>
+                <p class="district">부산 해운대구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">주호영</h2>
+                <p class="district">대구 수성구갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">진종오</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">최보윤</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">최수진</h2>
+                <p class="district">비례대표</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">최은석</h2>
+                <p class="district">대구 동구군위군갑</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">최형두</h2>
+                <p class="district">경남 창원시마산합포구</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">추경호</h2>
+                <p class="district">대구 달성군</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">한기호</h2>
+                <p class="district">강원 춘천시철원군화천군양구군을</p>
+            </div>
+        </li>
+        <li class="member">
+            <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/3d91cfa36267481a8f860816e419f426.png" alt="권영진" class="image">
+            <div class="details">
+                <p class="point">해당인원의특징</p>
+                <h2 class="name">한지아</h2>
+                <p class="district">비례대표</p>
             </div>
         </li>
     </ul>
